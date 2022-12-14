@@ -1,0 +1,334 @@
+{
+    "ipcMode": null,
+    "executionRoleArn": "arn:aws:iam::264605167596:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+      {
+        "dnsSearchDomains": null,
+        "environmentFiles": null,
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "secretOptions": null,
+          "options": {
+            "awslogs-group": "/ecs/ibot-link",
+            "awslogs-region": "eu-central-1",
+            "awslogs-stream-prefix": "ecs"
+          }
+        },
+        "entryPoint": null,
+        "portMappings": [
+          {
+            "hostPort": 443,
+            "protocol": "tcp",
+            "containerPort": 443
+          }
+        ],
+        "command": null,
+        "linuxParameters": null,
+        "cpu": 0,
+        "environment": [
+          {
+            "name": "APP_DEBUG",
+            "value": "true"
+          },
+          {
+            "name": "APP_ENV",
+            "value": "develop"
+          },
+          {
+            "name": "APP_KEY",
+            "value": "base64:GZvGTGkkzSfFRlMBXE8mATP/W6Ag1L/WcPQveuhlAlI="
+          },
+          {
+            "name": "APP_NAME",
+            "value": "devapp"
+          },
+          {
+            "name": "APP_URL",
+            "value": "https://www.zimbo.link"
+          },
+          {
+            "name": "AWS_BUCKET",
+            "value": "ibot-link"
+          },
+          {
+            "name": "AWS_CLUSTER",
+            "value": "PROD"
+          },
+          {
+            "name": "AWS_DEFAULT_REGION",
+            "value": "eu-central-1"
+          },
+          {
+            "name": "AWS_SECURITY_GROUP",
+            "value": "sg-002acf981687cd502"
+          },
+          {
+            "name": "AWS_SUBNET_0",
+            "value": "subnet-064c08c9856bd2471"
+          },
+          {
+            "name": "AWS_SUBNET_1",
+            "value": "subnet-02abdf7f3f6b669c2"
+          },
+          {
+            "name": "AWS_TASK_DEF",
+            "value": "terminal-tradersway"
+          },
+          {
+            "name": "AWS_USE_PATH_STYLE_ENDPOINT",
+            "value": "false"
+          },
+          {
+            "name": "AWS_VPC",
+            "value": "vpc-0db575ff3fdce482c"
+          },
+          {
+            "name": "BROADCAST_DRIVER",
+            "value": "log"
+          },
+          {
+            "name": "CACHE_DRIVER",
+            "value": "file"
+          },
+          {
+            "name": "DB_CONNECTION",
+            "value": "mysql"
+          },
+          {
+            "name": "DB_DATABASE",
+            "value": "devapp"
+          },
+          {
+            "name": "DB_HOST",
+            "value": "zimbo.chbboygmpey3.eu-central-1.rds.amazonaws.com"
+          },
+          {
+            "name": "DB_PORT",
+            "value": "3306"
+          },
+          {
+            "name": "DB_USERNAME",
+            "value": "admin"
+          },
+          {
+            "name": "FILESYSTEM_DRIVER",
+            "value": "local"
+          },
+          {
+            "name": "LOG_CHANNEL",
+            "value": "stderr"
+          },
+          {
+            "name": "LOG_LEVEL",
+            "value": "debug"
+          },
+          {
+            "name": "MAIL_ENCRYPTION",
+            "value": "ssl"
+          },
+          {
+            "name": "MAIL_FROM_ADDRESS",
+            "value": "support@ibot.link"
+          },
+          {
+            "name": "MAIL_HOST",
+            "value": "smtp-relay.sendinblue.com"
+          },
+          {
+            "name": "MAIL_MAILER",
+            "value": "smtp"
+          },
+          {
+            "name": "MAIL_PORT",
+            "value": "587"
+          },
+          {
+            "name": "MEMCACHED_HOST",
+            "value": "127.0.0.1"
+          },
+          {
+            "name": "MIX_PUSHER_APP_CLUSTER",
+            "value": "${PUSHER_APP_CLUSTER}"
+          },
+          {
+            "name": "MIX_PUSHER_APP_KEY",
+            "value": "${PUSHER_APP_KEY}"
+          },
+          {
+            "name": "PUSHER_APP_CLUSTER",
+            "value": "IBOT"
+          },
+          {
+            "name": "PUSHER_APP_ID",
+            "value": ""
+          },
+          {
+            "name": "PUSHER_APP_KEY",
+            "value": ""
+          },
+          {
+            "name": "QUEUE_CONNECTION",
+            "value": "sync"
+          },
+          {
+            "name": "REDIS_HOST",
+            "value": "127.0.0.1"
+          },
+          {
+            "name": "REDIS_PORT",
+            "value": "6379"
+          },
+          {
+            "name": "SENTRY_LARAVEL_DSN",
+            "value": "https://8223bb030e0f4a34b19232f7d4797ebe@o936329.ingest.sentry.io/5886447"
+          },
+          {
+            "name": "SENTRY_TRACES_SAMPLE_RATE",
+            "value": "0"
+          },
+          {
+            "name": "SESSION_DRIVER",
+            "value": "file"
+          },
+          {
+            "name": "SESSION_LIFETIME",
+            "value": "900"
+          },
+          {
+            "name": "WSS_URL",
+            "value": "wss://mt4.ibot.link:8081"
+          }
+        ],
+        "resourceRequirements": null,
+        "ulimits": null,
+        "dnsServers": null,
+        "mountPoints": [],
+        "workingDirectory": null,
+        "secrets": [
+          {
+            "valueFrom": "secret.AWS_ACCESS_KEY_ID",
+            "name": "AWS_ACCESS_KEY_ID"
+          },
+          {
+            "valueFrom": "secret.AWS_SECRET_ACCESS_KEY",
+            "name": "AWS_SECRET_ACCESS_KEY"
+          },
+          {
+            "valueFrom": "secret.DB_PASSWORD",
+            "name": "DB_PASSWORD"
+          },
+          {
+            "valueFrom": "secret.MT4_SECRET",
+            "name": "MT4_SECRET"
+          },
+          {
+            "valueFrom": "secret.REDIS_PASSWORD",
+            "name": "REDIS_PASSWORD"
+          }
+        ],
+        "dockerSecurityOptions": null,
+        "memory": null,
+        "memoryReservation": null,
+        "volumesFrom": [],
+        "stopTimeout": null,
+        "image": "264605167596.dkr.ecr.eu-central-1.amazonaws.com/ibot-link:ecabce2",
+        "startTimeout": null,
+        "firelensConfiguration": null,
+        "dependsOn": null,
+        "disableNetworking": null,
+        "interactive": null,
+        "healthCheck": null,
+        "essential": true,
+        "links": null,
+        "hostname": null,
+        "extraHosts": null,
+        "pseudoTerminal": null,
+        "user": null,
+        "readonlyRootFilesystem": null,
+        "dockerLabels": null,
+        "systemControls": null,
+        "privileged": null,
+        "name": "website"
+      }
+    ],
+    "placementConstraints": [],
+    "memory": "512",
+    "taskRoleArn": "arn:aws:iam::264605167596:role/ecsTaskExecutionRole",
+    "compatibilities": [
+      "EC2",
+      "FARGATE"
+    ],
+    "taskDefinitionArn": "arn:aws:ecs:eu-central-1:264605167596:task-definition/ibot-link:13",
+    "family": "ibot-link",
+    "requiresAttributes": [
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "ecs.capability.execution-role-awslogs"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "com.amazonaws.ecs.capability.ecr-auth"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "com.amazonaws.ecs.capability.task-iam-role"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "ecs.capability.execution-role-ecr-pull"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "ecs.capability.secrets.ssm.environment-variables"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "ecs.capability.task-eni"
+      }
+    ],
+    "pidMode": null,
+    "requiresCompatibilities": [
+      "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "runtimePlatform": {
+      "operatingSystemFamily": "LINUX",
+      "cpuArchitecture": null
+    },
+    "cpu": "256",
+    "revision": 13,
+    "status": "ACTIVE",
+    "inferenceAccelerators": null,
+    "proxyConfiguration": null,
+    "volumes": []
+  }
