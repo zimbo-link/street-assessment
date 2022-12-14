@@ -32,8 +32,7 @@ DB_USERNAME=root
 DB_PASSWORD=root
 ```
 
-Run these commands to seed the database as in the task assignment:
-note: I have added more Properties to view the pagination.
+Run these commands to seed the database.
 
 ```
 php artisan migrate
