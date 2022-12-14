@@ -32,7 +32,7 @@
                                 </div>
 
                                 <div class="text-right">
-                                    <button type="submit" class="btn btn-success bg-sky-500">Save</button>
+                                    <button type="submit" class="btn btn-success bg-sky-500">Upload</button>
 
                                 </div>
                             </form>
